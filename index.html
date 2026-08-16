@@ -733,6 +733,11 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+      .stat-num.compact {
+        font-size: 1.25rem;
+        white-space: nowrap;
+        letter-spacing: -0.01em;
+      }
       .stat-label {
         font-size: 11.5px;
         color: var(--text-3);
@@ -1721,18 +1726,18 @@
             >
           </div>
           <div class="stat-item reveal-scale" style="transition-delay: 0.08s">
-            <span class="stat-num">100+</span
+            <span class="stat-num compact">15d &rarr; hrs</span
             ><span class="stat-label"
-              >Suppliers onboarded<span class="stat-sub"
+              >Supplier onboarding<span class="stat-sub"
                 >on a platform I shipped at MHIRJ</span
               ></span
             >
           </div>
           <div class="stat-item reveal-scale" style="transition-delay: 0.16s">
-            <span class="stat-num">5+</span
+            <span class="stat-num compact">4s &rarr; 200ms</span
             ><span class="stat-label"
-              >Applications shipped<span class="stat-sub"
-                >to production end-to-end</span
+              >Document search speedup<span class="stat-sub"
+                >via Azure AI Search</span
               ></span
             >
           </div>
@@ -1792,6 +1797,8 @@
               <div class="skill-tags">
                 <span class="skill-tag">Azure</span
                 ><span class="skill-tag">Azure AD</span
+                ><span class="skill-tag">Azure AI Search</span
+                ><span class="skill-tag">Azure DevOps</span
                 ><span class="skill-tag">Docker</span
                 ><span class="skill-tag">GitHub Actions</span
                 ><span class="skill-tag">CI/CD</span>
@@ -1848,17 +1855,27 @@
                 </p>
                 <ul class="tl-points">
                   <li>
-                    Build and maintain full-stack web applications across the
-                    <strong>.NET and React</strong> stack, working end-to-end
-                    from Azure SQL data layers to production front-ends.
+                    Owned a <strong>supplier onboarding platform</strong>
+                    end-to-end (React/TypeScript, .NET Core and Node.js APIs,
+                    role-based access, Power Automate approvals) that cut
+                    onboarding from about <strong>15 days to a few hours</strong>.
                   </li>
                   <li>
-                    Shipped a supplier onboarding platform now used to manage
-                    <strong>100+ suppliers</strong>.
+                    Cut document search from about
+                    <strong>4s to under 200ms</strong> by moving it onto an
+                    <strong>Azure AI Search</strong> index over hundreds of
+                    thousands of records.
                   </li>
                   <li>
-                    Collaborate in an Agile team with code reviews, automated
-                    testing, and CI/CD release pipelines.
+                    Traced a production access bug across the portal, API,
+                    index, and database to a sync workflow writing empty strings
+                    instead of null, then fixed the workflow and restored client
+                    access the <strong>same day</strong>.
+                  </li>
+                  <li>
+                    Built shared <strong>React components</strong>, migrated 3
+                    legacy apps onto them, set up Azure DevOps CI/CD and
+                    monitoring, and mentored interns.
                   </li>
                 </ul>
               </div>
@@ -1881,12 +1898,20 @@
                 </p>
                 <ul class="tl-points">
                   <li>
-                    Developed and shipped full-stack features for client web
-                    platforms using <strong>React and Node.js</strong>.
+                    Built and shipped full-stack features for client web
+                    platforms using
+                    <strong>React, TypeScript, and Node.js/Express</strong>.
                   </li>
                   <li>
-                    Designed REST APIs and relational data models, and built
-                    responsive, reusable UI components.
+                    Built integration apps that auto-filled external record data
+                    into a support ticketing platform, saving agents about
+                    <strong>10% of their time per ticket</strong>.
+                  </li>
+                  <li>
+                    Built reusable component libraries that cut front-end
+                    development time by <strong>30%</strong>, applied TDD with
+                    Jest (<strong>85%+ coverage</strong>), and cleared
+                    Snyk-flagged security vulnerabilities.
                   </li>
                 </ul>
               </div>
@@ -1935,65 +1960,32 @@
               <div class="project-header">
                 <div class="project-icon">
                   <svg viewBox="0 0 24 24">
-                    <path
-                      d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
-                    />
-                  </svg>
-                </div>
-                <span class="project-year">2025</span>
-              </div>
-              <h3 class="project-name">AI Document Assistant</h3>
-              <p class="project-desc">
-                A retrieval-augmented (RAG) app that lets users upload documents
-                and ask natural-language questions, returning answers grounded
-                in their own files, each backed by source citations.
-              </p>
-              <p class="project-highlight">
-                Semantic search over private docs · cited, grounded answers
-              </p>
-              <div class="project-stack">
-                <span class="project-stack-tag">React</span
-                ><span class="project-stack-tag">TypeScript</span
-                ><span class="project-stack-tag">Node.js</span
-                ><span class="project-stack-tag">Express</span
-                ><span class="project-stack-tag">OpenAI API</span
-                ><span class="project-stack-tag">PostgreSQL + pgvector</span
-                ><span class="project-stack-tag">Docker</span>
-              </div>
-              </div>
-            <div class="project-card" style="transition-delay: 0.1s">
-              <div class="project-header">
-                <div class="project-icon">
-                  <svg viewBox="0 0 24 24">
-                    <rect x="3" y="3" width="7" height="7" />
-                    <rect x="14" y="3" width="7" height="7" />
-                    <rect x="14" y="14" width="7" height="7" />
-                    <rect x="3" y="14" width="7" height="7" />
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M8.5 14.5c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8" />
+                    <line x1="9" y1="9.5" x2="9.5" y2="9.5" />
+                    <line x1="14.5" y1="9.5" x2="15" y2="9.5" />
                   </svg>
                 </div>
                 <span class="project-year">2024</span>
               </div>
-              <h3 class="project-name">Real-Time Collaborative Task Board</h3>
+              <h3 class="project-name">Facial Emotion Detection (AI/ML)</h3>
               <p class="project-desc">
-                A Trello-style kanban board with live multi-user updates,
-                drag-and-drop cards, and role-based boards, all built on a clean
-                REST API with real-time WebSocket sync and JWT auth.
+                A CNN that classifies facial emotion from images, trained on a
+                labeled Kaggle dataset, with a focus on fairness across gender
+                and age groups rather than just top-line accuracy.
               </p>
               <p class="project-highlight">
-                Live multi-user sync over WebSockets (Socket.IO)
+                Cut a 30-50% cross-group accuracy gap down to about 5-10%
               </p>
               <div class="project-stack">
-                <span class="project-stack-tag">React</span
-                ><span class="project-stack-tag">TypeScript</span
-                ><span class="project-stack-tag">Node.js</span
-                ><span class="project-stack-tag">Express</span
-                ><span class="project-stack-tag">Socket.IO</span
-                ><span class="project-stack-tag">PostgreSQL</span
-                ><span class="project-stack-tag">JWT</span
-                ><span class="project-stack-tag">Docker</span>
+                <span class="project-stack-tag">Python</span
+                ><span class="project-stack-tag">PyTorch</span
+                ><span class="project-stack-tag">CNN</span
+                ><span class="project-stack-tag">OpenCV</span
+                ><span class="project-stack-tag">NumPy</span>
               </div>
-              </div>
-            <div class="project-card" style="transition-delay: 0.2s">
+            </div>
+            <div class="project-card" style="transition-delay: 0.1s">
               <div class="project-header">
                 <div class="project-icon">
                   <svg viewBox="0 0 24 24">
@@ -2002,7 +1994,7 @@
                     />
                   </svg>
                 </div>
-                <span class="project-year">2024</span>
+                <span class="project-year">2023</span>
               </div>
               <h3 class="project-name">
                 Inventory &amp; Order Management Platform
